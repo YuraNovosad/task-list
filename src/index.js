@@ -15,10 +15,15 @@
  * Список із завданнями має бути доступним після перезавантаження сторінки.
  */
 import localStorage from './js/localStorageAPI';
-// console.log(localStorage);
+import { submitForm } from './js/submitForm';
+import refs from './js/refs';
+
+const { formEl } = refs;
+
 localStorage.initStorage();
 localStorage.removeTask(3);
 // localStorage.addTask({ id: 1, name: 'yuras', text: 'task' });
 // localStorage.addTask({ id: 2, name: 'yuras', text: 'task' });
 // localStorage.addTask({ id: 3, name: 'yuras', text: 'task' });
 // localStorage.addTask({ id: 4, name: 'yuras', text: 'task' });
+formEl.addEventListener('submit', submitForm);
