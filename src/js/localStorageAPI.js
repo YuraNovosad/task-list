@@ -25,5 +25,4 @@ function removeTask(id) {
   const newArray = array.filter(item => item.id !== id);
   localStorage.setItem(TASK_KEY, JSON.stringify(newArray));
 }
-
 export default { initStorage, addTask, removeTask };
